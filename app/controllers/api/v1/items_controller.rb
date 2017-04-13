@@ -8,9 +8,19 @@ class Api::V1::ItemsController < ApplicationController
     render json: Item.find_by(params["id"])
   end
 
+  # def destroy
+  #   # binding.pry
+  #   render json: Item.delete(params["id"])
+  # end
+
+  # def create
+  #   render json: Item.create(item_params)
+  #   binding.pry
+  # end
+
   private
 
-  def items_params
+  def item_params
     params.require(:item).permit(:id, :name, :description, :image_url)
   end
 end

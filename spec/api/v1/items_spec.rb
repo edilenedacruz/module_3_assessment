@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "GET" do
+RSpec.describe "API" do
   it "gets a 200 response" do
 
     get "/api/v1/items"
@@ -25,5 +25,18 @@ RSpec.describe "GET" do
 
   end
 
-  it "gets "
+  xit "deletes a record" do
+
+    delete "/api/v1/items/1"
+
+    expect(response).to eq(204)
+  end
+
+  it "creates a record" do
+    item_params = Item.create(name: "Ruby", description: "programming language", image_url: "https://www.sitepoint.com/wp-content/themes/sitepoint/assets/images/icon.ruby.png")
+
+    post "/api/v1/items", item: { item: item_params}
+
+    expect(response.status).to eq(201)
+  end
 end
