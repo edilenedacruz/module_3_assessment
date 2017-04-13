@@ -1,13 +1,12 @@
 class BestBuyService
-  attr_reader :connection, :key
+  attr_reader :connection
   def initialize
-    @key = ENV['API_KEY']
-    @connection = Faraday.new("https://api.bestbuy.com/v1")
+    @connection = 
   end
 
   def find_with_zip(zip)
-    a = parse(@connection.get 
     binding.pry
+    a = parse(connection)
   end
 
   private
