@@ -15,6 +15,7 @@ gem 'figaro'
 gem 'faraday'
 gem 'faker'
 gem 'pry'
+gem 'active_model_serializers', '~> 0.10.0'
 
 group :development do
   gem "spring"
