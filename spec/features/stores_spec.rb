@@ -10,15 +10,24 @@ RSpec.feature "User can search" do
     find(:css, "input[id$='q']").set("80202")
     click_on "Search"
 
+    expect(current_path).to eq("/search")
   end
 
-  # find(:css, "input[id$='q']").set("80202")
+  xit "can see stores within 25 miles of 80202" do
+
+    visit '/'
+
+    expect(current_path).to eq(root_path)
+
+    find(:css, "input[id$='q']").set("80202")
+    click_on "Search"
+
+    expect(page).to have_content("25 miles")
+    expect(page).to have_content("80202")
+    expect(page).to have_content("16 Total Stores")
+  end
 end
 
-
-# As a user
-# When I visit "/"
-# And I fill in a search box with "80202" and click "search"
 # Then my current path should be "/search" (ignoring params)
 # And I should see stores within 25 miles of 80202
 # And I should see a message that says "16 Total Stores"
