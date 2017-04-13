@@ -24,7 +24,12 @@ RSpec.feature "User can search" do
 
     expect(page).to have_content("25 miles")
     expect(page).to have_content("80202")
-    expect(page).to have_content("16 Total Stores")
+    # expect(page).to have_content("16 Total Stores")
+    expect(page).to have_content("Store name")
+    expect(page).to have_content("City")
+    expect(page).to have_content("Distance")
+    expect(page).to have_content("Phone number")
+    expect(page).to have_content("Type of store")
   end
 end
 

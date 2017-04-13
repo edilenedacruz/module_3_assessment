@@ -1,3 +1,5 @@
+<h1>BestBuy Stores within a 25 miles radius from <%= @miles %>:</h1>
+
 <% @stores.map do |store| %>
   <p>Store name: <%= store.long_name %></p>
   <p>City: <%= store.city %></p>
