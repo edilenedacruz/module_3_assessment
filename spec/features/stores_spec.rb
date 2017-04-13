@@ -7,10 +7,12 @@ RSpec.feature "User can search" do
 
     expect(current_path).to eq(root_path)
 
-    save_and_open_page
+    find(:css, "input[id$='q']").set("80202")
+    click_on "Search"
+
   end
 
-
+  # find(:css, "input[id$='q']").set("80202")
 end
 
 

@@ -10,5 +10,7 @@ Rails.application.routes.draw do
       resources :items
     end
   end
-  
+
+  get "/search", to: 'search#index'
+
 end

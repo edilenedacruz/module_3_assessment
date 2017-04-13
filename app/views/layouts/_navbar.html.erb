@@ -20,9 +20,10 @@
         <a href="/orders">Orders</a>
       </li>
     </ul>
-      <%= form_tag :search, method: :get  %>
-        <%= text_field_tag :locate, "Search a BestBuy Store by zip" %>
-        <%= submit_tag "Locate" %>
+          <%= form_tag("/search", method: "get") do %>
+        <%= label_tag(:q, "Search for:") %>
+        <%= text_field_tag(:q) %>
+        <%= submit_tag("Search") %>
       <% end %>
   </div>
 </nav>
