@@ -13,10 +13,9 @@ class Api::V1::ItemsController < ApplicationController
   #   render json: Item.delete(params["id"])
   # end
 
-  # def create
-  #   render json: Item.create(item_params)
-  #   binding.pry
-  # end
+  def create
+    render json: Item.create(item_params)
+  end
 
   private
 
