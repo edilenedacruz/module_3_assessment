@@ -7,7 +7,8 @@ RSpec.describe BestBuyService do
   end
 
   it "when I visit '/' I can search for stores with zip '80202' " do
-
-    stores = @best_buy.find_with_zip("80202")
+    zip = "80202"
+    stores = @best_buy(zip)
+    binding.pry
   end
 end
