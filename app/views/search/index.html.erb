@@ -1,0 +1,8 @@
+<% @stores.map do |store| %>
+  <p>Store name: <%= store.long_name %></p>
+  <p>City: <%= store.city %></p>
+  <p>Distance:
+  <p>Phone number: <%= store.phone %></p>
+  <p>Type of store: <%= store.type %></p>
+  <hr>
+<% end %>
