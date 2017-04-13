@@ -8,16 +8,26 @@ gem "coffee-rails", "~> 4.0.0"
 gem "jquery-rails"
 gem "turbolinks"
 gem "jbuilder", "~> 2.0"
-gem "faker"
 gem "therubyracer"
 gem "less-rails-bootstrap"
-gem "minitest-rails"
+gem 'bcrypt', '~> 3.1.7'
+gem 'figaro'
+gem 'faraday'
+gem 'faker'
+gem 'pry'
 
 group :development do
   gem "spring"
 end
 
 group :development, :test do
-  gem "minitest-rails-capybara"
   gem "pry", :require => "pry"
+  gem 'byebug', platform: :mri
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'launchy'
+  gem 'pry'
+  gem 'database_cleaner'
+  gem 'shoulda-matchers'
+  gem 'fabrication'
 end
